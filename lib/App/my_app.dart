@@ -1,7 +1,4 @@
-import 'package:first_flutter_app/App/pages/blue.dart';
-import 'package:first_flutter_app/App/pages/genders.dart';
-import 'package:first_flutter_app/App/pages/red.dart';
-import 'package:first_flutter_app/App/pages/teal.dart';
+import 'package:first_flutter_app/App/pages/QuizApp/quiz.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -16,32 +13,10 @@ class MyApp extends StatelessWidget {
       //* it's better to use route name from the widget representing the page to avoid confusion and long routes
       initialRoute: '/',
       routes: {
-        '/': (context) => const Genders(),
-        BlueScreen.routName: (context) => const BlueScreen(),
-        RedScreen.routName: (context) => const RedScreen(),
-        TealScreen.routName: (context) => const TealScreen(),
+        '/': (context) => const Quiz(),
       },
       theme: ThemeData(
-        textButtonTheme: TextButtonThemeData(
-          style: ButtonStyle(
-              overlayColor: MaterialStateProperty.all(Colors.white)),
-        ),
-        appBarTheme: const AppBarTheme(
-            foregroundColor: Colors.white,
-            titleTextStyle: TextStyle(fontFamily: "Splash", fontSize: 20)),
-        textTheme: const TextTheme(
-          bodyText2: TextStyle(color: Colors.teal, fontFamily: "Splash"),
-          button: TextStyle(
-            color: Colors.teal,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic,
-            letterSpacing: 1,
-          ),
-        ), //! to use accentColor you need to use colorSchema as its alternative and also for primarySwatch
         primarySwatch: Colors.teal,
-        // colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.teal)
-        //     .copyWith(secondary: Colors.blueAccent),
       ),
       debugShowCheckedModeBanner: false,
     );
